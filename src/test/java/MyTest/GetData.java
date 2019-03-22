@@ -32,5 +32,8 @@ public class GetData {
                 body("page=2.data[0].find { it.@id == 4 }.item", hasItems("Eve", "Holt"));
 
 
-*/    }
+*/
+        String usernames = resp.jsonPath().getString("first_name[0]");
+        System.out.println(usernames);
+    }
 }
